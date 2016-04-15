@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="pN1-cD-3E8">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="QGi-aT-WN0"/>
@@ -27,17 +27,19 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.38276356659999999" green="0.7182962437" blue="0.43874414810000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="pN1-cD-3E8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="AVf-yr-DA3"/>
                             <constraint firstAttribute="trailing" secondItem="pN1-cD-3E8" secondAttribute="trailing" id="EK5-Yn-Dow"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pN1-cD-3E8" secondAttribute="bottom" id="YmB-c9-ouG"/>
+                            <constraint firstItem="pN1-cD-3E8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-64" id="QmW-R7-sqI"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pN1-cD-3E8" secondAttribute="bottom" constant="64" id="YmB-c9-ouG"/>
                             <constraint firstAttribute="trailingMargin" secondItem="pN1-cD-3E8" secondAttribute="trailing" id="cVk-v8-biy"/>
                             <constraint firstItem="pN1-cD-3E8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="spv-7P-fY8"/>
                             <constraint firstItem="pN1-cD-3E8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wWJ-Wh-g6J"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="AVf-yr-DA3"/>
                                 <exclude reference="cVk-v8-biy"/>
                                 <exclude reference="spv-7P-fY8"/>
                             </mask>

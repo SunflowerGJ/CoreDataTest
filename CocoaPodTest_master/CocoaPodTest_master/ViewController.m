@@ -15,7 +15,7 @@
 #import "Family.h"
 #import "MembersViewController.h"
 
-@interface ViewController ()<UIAlertViewDelegate>{
+@interface ViewController ()<UIAlertViewDelegate,UITableViewDataSource,UITableViewDelegate>{
     NSArray *_arrDatasource;
 }
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -67,6 +67,7 @@
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return _arrDatasource.count;
 }
+
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     NSString * strId = @"cellIdentifier";
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:strId];
