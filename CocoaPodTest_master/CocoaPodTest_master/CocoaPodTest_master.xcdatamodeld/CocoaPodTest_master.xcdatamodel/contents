@@ -3,7 +3,7 @@
     <entity name="Family" representedClassName="Family" syncable="YES">
         <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="members" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Member" inverseName="family" inverseEntity="Member" syncable="YES"/>
+        <relationship name="members" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Member" inverseName="family" inverseEntity="Member" syncable="YES"/>
     </entity>
     <entity name="Member" representedClassName="Member" syncable="YES">
         <attribute name="age" optional="YES" attributeType="String" syncable="YES"/>
@@ -12,7 +12,7 @@
         <relationship name="family" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Family" inverseName="members" inverseEntity="Family" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Family" positionX="-63" positionY="-81" width="128" height="88"/>
+        <element name="Family" positionX="-63" positionY="-81" width="128" height="90"/>
         <element name="Member" positionX="160" positionY="-54" width="128" height="105"/>
     </elements>
 </model>

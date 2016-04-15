@@ -40,10 +40,6 @@
     AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
     NSManagedObjectContext *context = appDelegate.managedObjectContext;
     
-    [family.members enumerateObjectsUsingBlock:^(id  _Nonnull obj, BOOL * _Nonnull stop) {
-        Member *member = (Member *)obj;
-        [context deleteObject:member];
-    }];
     [context deleteObject:family];
     
     NSError *error = nil;
